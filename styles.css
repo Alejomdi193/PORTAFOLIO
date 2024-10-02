@@ -1,6 +1,3 @@
-/* styles.css */
-
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #111210;
@@ -9,11 +6,11 @@ body {
     padding: 0;
 }
 
-/* Contenedor principal */
+
 .container {
     width: 90%;
-    max-width: 800px; /* Ajusta el ancho máximo para centrar el contenido */
-    margin: 0 auto; /* Centramos el contenedor */
+    max-width: 800px;
+    margin: 0 auto; 
     padding: 20px;
 }
 
@@ -22,7 +19,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Sección de perfil */
+
 .profile-section {
     background-color: #1a1a1a;
     padding: 20px;
@@ -36,11 +33,15 @@ h2 {
 }
 
 .profile-photo {
-    border-radius: 50%;
-    margin-right: 20px;
-    width: 100px;
-    height: 100px;
+    border-radius: 50%; 
+    margin-right: 10px;
+    width: 150px; 
+    height: 200px;
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #111210; 
 }
+
 
 .profile-info {
     flex: 1;
@@ -215,10 +216,11 @@ h2 {
 
 .project-tags {
     margin-top: 10px;
+    gap: 10px;
 }
 
 .project-tags .tag {
-    margin-right: 5px;
+    margin: 5px;
 }
 
 .project-links {

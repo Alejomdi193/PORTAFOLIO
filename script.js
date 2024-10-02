@@ -1,18 +1,19 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
-    const textoElement = document.getElementById('sobre-mi-texto');
-    const texto = textoElement.textContent;
-    textoElement.textContent = ''; // Limpiamos el contenido inicial
-    let index = 0;
+    const elementos = document.querySelectorAll('[id^="sobre-mi-texto"]');
+    
+    elementos.forEach(elemento => {
+        const texto = elemento.textContent;
+        elemento.textContent = '';
+        let index = 0;
 
-    function escribirTexto() {
-        if (index < texto.length) {
-            textoElement.textContent += texto.charAt(index);
-            index++;
-            setTimeout(escribirTexto, 50); // Velocidad de escritura (ajustable)
+        function escribirTexto() {
+            if (index < texto.length) {
+                elemento.textContent += texto.charAt(index);
+                index++;
+                setTimeout(escribirTexto, 50);
+            }
         }
-    }
 
-    escribirTexto();
+        escribirTexto();
+    });
 });
